@@ -1,0 +1,62 @@
+@import 'variables';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-header {
+    margin: 20px 0 0 70px; 
+
+    @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) { 
+      margin: 0 0 0 15px;
+      width: 40%;
+    }
+    
+
+    img { 
+      @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) { 
+        width: 70%;
+      }
+    }
+    
+  }
+
+nav {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-right: 70px;
+      display: flex;
+
+      @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) { 
+        margin-right: 10px;
+      }
+
+
+      li {
+        margin-left: 40px; 
+       
+        @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) { 
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 13px;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        a, span {
+          text-decoration: none;
+
+          &.active {
+            color: black;
+            text-decoration: underline;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}
