@@ -1,23 +1,29 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './composants/header'; // Importation du composant Header
+
+// Importation des composants
+import Header from './composants/header';
+import Footer from './composants/footer';
+
+// Importation des pages
 import Accueil from './pages/Accueil';
 import Apropos from './pages/Apropos';
 import Erreur from './pages/Erreur';
-import './styles/global.scss'; // Assurez-vous que ce fichier existe et est correctement importé
+import './styles/imports.scss'; 
 
 function App() {
   return (
     <Router>
-      <div>
-        <Header /> {/* Ajoute le composant Header ici */}
-        <main>
+      <div className="app-container">
+        <Header /> {/* composant header */}
+        <main className="content">
           <Routes>
             <Route path="/" element={<Accueil />} />
             <Route path="/apropos" element={<Apropos />} />
             <Route path="*" element={<Erreur />} />
           </Routes>
         </main>
+        <Footer /> {/* composant footer */}
       </div>
     </Router>
   );

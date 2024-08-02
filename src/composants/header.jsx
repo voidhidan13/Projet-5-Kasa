@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/images/Logo_kasa.png'; // Chemin mis à jour
+import logo from '../assets/images/Logo_kasa.png'; 
 import '../styles/header.scss'
 
 const Header = () => {
   const location = useLocation();
 
+  // Fonction pour déterminer si page d'accueil ou page à propos
   const isActive = (path) => location.pathname === path;
 
   return (
