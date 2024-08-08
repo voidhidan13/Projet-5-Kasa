@@ -6,10 +6,15 @@ import { useNavigate } from 'react-router-dom';
 const Appartementscartes = ({ id, title, cover }) => {
   const navigate = useNavigate();
 
+  
+  
+  //Redirection vers chaque page logement  
   const handleClick = () => {
     navigate(`/logement/${id}`);
   };
 
+
+  //Conversion titre en tableau pour gerer la longueur interface utilisateur
   const words = title.split(' ');
   const firstLine = words.slice(0, 3).join(' ');
   const secondLine = words.slice(3).join(' ');
@@ -27,6 +32,8 @@ const Appartementscartes = ({ id, title, cover }) => {
   );
 };
 
+
+// Definition des propriétés nécessaires au composant 
 Appartementscartes.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
