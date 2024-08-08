@@ -1,5 +1,5 @@
 import React from 'react';
-import ApartmentCards from './ApartmentCards';
+import Appartementscartes from './Appartementscartes';
 import data from '../data/donnees.json';
 
 
@@ -8,9 +8,9 @@ const ListeAppartements = () => {
     
   
     return (
-      <div className="apartment-list">
+      <div className="appartements-liste">
         {data.map((apartment) => (
-          <ApartmentCards
+          <Appartementscartes
             key={apartment.id}
             id={apartment.id}
             title={apartment.title}

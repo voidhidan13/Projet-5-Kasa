@@ -1,0 +1,164 @@
+@import 'variables';
+
+.page-accueil {
+    .banniere-accueil {
+      position: relative;
+      //background-image: url('../images/en attente de recup de l'autre image');//
+      background-size: cover;
+      background-position: center;
+      height: 230px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      margin-top: 50px;
+      border-radius: 15px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+
+
+        @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) { 
+          max-width: 95%;
+          height: 150px;
+          margin:30px 20px 30px 20px;
+        }
+
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+          z-index: 1;
+          border-radius: 15px;
+        }
+
+        .banniere-texte {
+          position: relative;
+          color: white;
+          font-size: 1.5rem;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+          z-index: 2;
+
+          h1 {
+            .line-break {
+              display: none;
+            }
+
+            @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) { 
+              .line-break {
+                display: inline;
+              }
+            }
+          }
+
+        @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) { 
+          font-size: 14px;
+          padding-left:20px;
+          width: 90%;
+        }
+      }
+    }
+
+      .cards-container {
+        max-width: 90%;
+        margin: 20px auto;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        background-color: #f2f2f2;
+        border-radius: 15px;
+        
+      
+        @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) { 
+          background-color: white;
+        }
+      
+      }
+}
+
+    .appartements-liste {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      gap: 40px;
+      width: 100%;
+      padding: 20px 0px 70px 20px;
+
+      @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) { 
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        gap:10px;
+      }
+ 
+      .appartements-cartes {
+        width: 70%;
+        height: 90%;
+        margin: 30px 0px 30px 40px;
+        cursor: pointer;
+        
+
+        @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
+          width: 100%;
+          margin: 0px 0px 30px 0px;
+          height: 250px;
+        }
+
+      .image-container {
+        
+        position: relative;
+        height: 110%;
+
+        @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
+          height: 250px;
+        }
+      
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+
+          @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) { 
+            height: 250px;
+          }
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 35%;
+          border-radius: 10px;
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+          z-index: 1;
+        }
+       
+        h2 {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          color: white;
+          font-size: 0.9rem;
+          margin: 0;
+          z-index: 2;
+          
+          
+          @media (min-width: 769px) and (max-width: 1041px) { 
+            font-size: 12px;
+            margin-top: 0px;
+           
+          }
+         }
+        }
+      }
+    }
+
