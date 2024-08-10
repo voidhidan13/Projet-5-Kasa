@@ -4,12 +4,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 70px;
-    margin-top:  40px;
-    margin-bottom: 30px;
+    gap: 139px;
+    margin-top:  139px;
 
 }
 
 .erreur-titre {
-    font-size: 180px;
+    font-size: 288px;
+    font-family: 'montserrat', sans-serif;
+    color: #FF6060;
+
+    
+}
+
+.erreur-message {
+    font-size: 36px;
+    font-family: 'montserrat', sans-serif;
+    color: #FF6060;
+
 }
