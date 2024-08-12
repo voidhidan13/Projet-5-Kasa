@@ -1,9 +1,9 @@
 @import 'variables';
 
-.page-accueil {
+.accueil {
     .banniere-accueil {
       position: relative;
-      //background-image: url('../images/en attente de recup de l'autre image');//
+      background-image: url('../assets/images/banniere.png');
       background-size: cover;
       background-position: center;
       height: 230px;
