@@ -36,6 +36,8 @@ nav {
 
       li {
         margin-left: 40px; 
+        font-size: 24px;
+        font-family: 'Montserrat',sans-serif;
        
         @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) { 
           text-transform: uppercase;
