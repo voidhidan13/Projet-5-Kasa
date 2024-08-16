@@ -1,15 +1,19 @@
 import React from 'react';
-import CollapseComponent from '../components/CollapseComponent';
-import aboutList  from '../data/aboutlist.json';
+import Depliant from '../composants/depliant';
+import AproposListe from '../data/aproposliste.json';
 
 const APropos = () => {
+  
+  
   return (
     <div className="page-apropos">
-      <div className="banner-apropos">
+      <div className="bannierre-apropos">
       </div>
-      <div className="collapse-container" >
-        {aboutList.map(item => (
-          <CollapseComponent
+     
+         
+      <div className="depliant-container"> 
+        {AproposListe.map(item => (
+          <Depliant
             key={item.title}
             title={item.title}
             content={item.content}
@@ -20,4 +24,4 @@ const APropos = () => {
   );
 };
 
-export default APropos
+export default APropos;
