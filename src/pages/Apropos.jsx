@@ -1,7 +1,23 @@
 import React from 'react';
+import CollapseComponent from '../components/CollapseComponent';
+import aboutList  from '../data/aboutlist.json';
 
-function Apropos() {
-  return <h1>À Propos</h1>;
-}
+const APropos = () => {
+  return (
+    <div className="page-apropos">
+      <div className="banner-apropos">
+      </div>
+      <div className="collapse-container" >
+        {aboutList.map(item => (
+          <CollapseComponent
+            key={item.title}
+            title={item.title}
+            content={item.content}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default Apropos;
+export default APropos

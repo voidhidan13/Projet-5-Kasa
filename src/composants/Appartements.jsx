@@ -7,7 +7,7 @@ const ListeAppartements = () => {
     
     
   
-  // Fonction pour créer la liste de appartements en bouclant les cartes 
+  // Fonction pour créer la liste de appartements en bouclant les cartes //
     return (
       <div className="appartements-liste">
         {data.map((apartment) => (
