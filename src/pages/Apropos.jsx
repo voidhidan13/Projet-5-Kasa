@@ -1,6 +1,7 @@
 import React from 'react';
 import Depliant from '../composants/depliant';
 import AproposListe from '../data/aproposliste.json';
+import '../styles/apropos.scss'
 
 const APropos = () => {
   

@@ -14,7 +14,7 @@ const Depliant = ({ title, content }) => {
     <div className={`depliant-composants ${isOpen ? 'depliant-ouvert' : ''}`}>
       <div className="depliant-entete" onClick={basculeDepliant}>
         <span>{title}</span>
-        <div className="fleche">
+        <div className="fleche-contenair">
           <div className={`fleche ${isOpen ? 'ouvert' : ''}`} />
         </div>
       </div>
