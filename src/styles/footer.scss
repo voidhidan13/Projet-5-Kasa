@@ -1,22 +1,22 @@
 @import 'variables';
 
 .footer {
-    background-color: black; 
-    color: white; 
-    text-align: center; 
-    padding: 20px;
-  
-    .logo_footer {
-      margin-bottom: 20px; 
-    }
-  
+  background-color: black; 
+  color: white; 
+  text-align: center; 
+  padding: 20px;
+
+  .logo_footer {
+    margin-bottom: 20px; 
+  }
+
+  .line-break {
+    display: none;
+  }
+
+  @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
     .line-break {
-      display: none;
-    }
-  
-    @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
-      .line-break {
-        display: inline;
-      }
+      display: inline;
     }
   }
+}
