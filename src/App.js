@@ -9,7 +9,7 @@ import Footer from './composants/footer';
 import Accueil from './pages/Accueil';
 import Apropos from './pages/Apropos';
 import Erreur from './pages/Erreur';
-import './styles/imports.scss'; 
+import './App.css'; 
 
 function App() {
   return (
