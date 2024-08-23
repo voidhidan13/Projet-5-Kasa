@@ -1,11 +1,41 @@
 @import 'variables';
 
+
+.erreur-lien {
+    font-family: 'montserrat',sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+
+}
+
+.erreur-titre {
+    font-size: 180px;
+    font-size: 288px;
+    font-family: 'montserrat', sans-serif;
+    color: #FF6060;
+
+
+}
+
+.erreur-message {
+    font-size: 36px;
+    font-family: 'montserrat', sans-serif;
+    color: #FF6060;
+
+}
+    
+
 .erreur-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #FF6060;
     margin-bottom:50px;
+
+
+
+
     
     h1 {
         font-size: 200px;
@@ -38,27 +68,3 @@
 }
 
 
-.erreur-lien {
-    font-family: 'montserrat',sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    color: #000000;
-
-}
-
-.erreur-titre {
-    font-size: 180px;
-    font-size: 288px;
-    font-family: 'montserrat', sans-serif;
-    color: #FF6060;
-
-
-}
-
-.erreur-message {
-    font-size: 36px;
-    font-family: 'montserrat', sans-serif;
-    color: #FF6060;
-
-}
-    

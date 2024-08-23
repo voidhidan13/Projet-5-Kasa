@@ -9,7 +9,9 @@ import Footer from './composants/footer';
 import Accueil from './pages/Accueil';
 import Apropos from './pages/Apropos';
 import Erreur from './pages/Erreur';
-import './App.css'; 
+import Logements from './pages/Logements';
+
+import './App.css';
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
             <Route path="/" element={<Accueil />} />
             <Route path="/apropos" element={<Apropos />} />
             <Route path="*" element={<Erreur />} />
+            <Route path="/logement/:id" element={<Logements />} />
           </Routes>
         </main>
         <Footer /> {/* composant footer */}
