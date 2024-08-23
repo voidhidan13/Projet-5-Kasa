@@ -38,49 +38,6 @@ const Logements  = () => {
         return stars;
     };
 
-    const renderHostName = (name) => {
-        const [firstName, lastName] = name.split(' ');
-        return (
-            <div className="host-name">
-                <div>{firstName}</div>
-                <div>{lastName}</div>
-            </div>
-        );
-    };
-
-    return (
-        <div className="page-logement">
-            <Transition images={logement.pictures} />
-            <div className="logement-details">
-                <div className="grid-container">
-                    <div className="left-column">
-                        <div className="title-container">
-                            <h1>{logement.title}</h1>
-                            <h2>{logement.location}</h2>
-                        </div>
-                        <div className="tags">
-                            {logement.tags.map((tag, index) => (
-                                <p key={index}>{tag}</p>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="right-column">
-                        <div className="host-info">
-                            {renderHostName(logement.host.name)}
-                            <img src={logement.host.picture} alt={logement.host.name} className="host-picture" />
-                        </div>
-                        <div className="rating-container">
-                            {renderStars(logement.rating)}
-                        </div>
-                    </div>
-                </div>
-                <div className="collapse-container">
-                    <Depliant className="collapse-component" title="Description" content={logement.description} />
-                    <Depliant className="collapse-component" title="Equipements" content={logement.equipments.map((item, index) => <li key={index}>{item}</li>)} />
-                </div>
-            </div>
-        </div>
-    );
 };
 
 export default Logements;
