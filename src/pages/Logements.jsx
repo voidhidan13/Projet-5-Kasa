@@ -20,9 +20,13 @@ const Logements  = () => {
 
     // Redirection page erreur si pas de data
     const logement = data.find((item) => item.id === id);
+    
     if (!logement) {
         return <Erreur />;
     }
+    
+
+
 
     const renderStars = (rating) => {
         const stars = [];
@@ -48,32 +52,32 @@ const Logements  = () => {
         );
     };
 
-    return (
-        <div className="page-logement">
-            <Transition images={logement.pictures} />
-            <div className="logement-details">
-                <div className="grid-container">
-                    <div className="left-column">
-                        <div className="title-container">
-                            <h1>{logement.title}</h1>
-                            <h2>{logement.location}</h2>
+        return (
+            <div className="page-logement">
+                <Transition images={logement.pictures} />
+                <div className="logement-details">
+                    <div className="grid-container">
+                        <div className="left-column">
+                            <div className="title-container">
+                                <h1>{logement.title}</h1>
+                                <h2>{logement.location}</h2>
+                            </div>
+                            <div className="tags">
+                                {logement.tags.map((tag, index) => (
+                                    <p key={index}>{tag}</p>
+                                ))}
+                            </div>
                         </div>
-                        <div className="tags">
-                            {logement.tags.map((tag, index) => (
-                                <p key={index}>{tag}</p>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="right-column">
+                        <div className="right-column">
                         <div className="host-info">
                             {renderHostName(logement.host.name)}
                             <img src={logement.host.picture} alt={logement.host.name} className="host-picture" />
                         </div>
-                        <div className="rating-container">
-                            {renderStars(logement.rating)}
+                            <div className="rating-container">
+                                {renderStars(logement.rating)}
+                            </div>
                         </div>
                     </div>
-                </div>
                 <div className="collapse-container">
                     <Depliant className="collapse-component" title="Description" content={logement.description} />
                     <Depliant className="collapse-component" title="Equipements" content={logement.equipments.map((item, index) => <li key={index}>{item}</li>)} />
@@ -82,5 +86,6 @@ const Logements  = () => {
         </div>
     );
 };
+
 
 export default Logements;

@@ -18,7 +18,7 @@ const Transition = ({ images }) => {
     };
 
     return (
-        <div className="slideshow">
+        <div className="diaporama">
             {images.length > 1 && ( 
                 <>
                     <div className="arrow left" onClick={prevImage}></div>
