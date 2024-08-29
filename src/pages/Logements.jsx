@@ -12,10 +12,9 @@ const Logements  = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        console.log("Composant Logements monté");
-        console.log("ID from URL:", id);
+       //console.log("ID from URL:", id);
         const logement = data.find((item) => item.id === id);
-        console.log("Matching Logement:", logement);
+        //console.log("Matching Logement:", logement);
     }, [id]);
 
     // Redirection page erreur si pas de data
