@@ -1,45 +1,17 @@
 @import 'variables';
 
 
-.erreur-lien {
-    font-family: 'montserrat',sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    color: #000000;
-
-}
-
-.erreur-titre {
-    font-size: 180px;
-    font-size: 288px;
-    font-family: 'montserrat', sans-serif;
-    color: #FF6060;
-
-
-}
-
-.erreur-message {
-    font-size: 36px;
-    font-family: 'montserrat', sans-serif;
-    color: #FF6060;
-
-}
-    
-
-.erreur-box {
+.erreur {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #FF6060;
     margin-bottom:50px;
-
-
-
-
     
     h1 {
         font-size: 200px;
         margin-bottom: 40px;
+        font-family: 'Montesserat',sans-serif;
 
         @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) { 
             font-size: 120px;
@@ -48,9 +20,14 @@
 
     h2 { 
         margin-bottom: 60px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+
+
         
         .line-break { 
             display: none;
+            
             @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) { 
                 display: inline;
             }
@@ -63,8 +40,9 @@
     }
 
     a { 
-        font-size: 15px;
+        font-size: 17px;
+        font-family: 'Montserrat', sans-serif;
+        color: black;
     }
 }
-
-
+    

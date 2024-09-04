@@ -8,6 +8,8 @@ const Appartementscartes = ({ id, title, cover }) => {
   // Redirection vers chaque page logement  
   const handleClick = () => {
     navigate(`/logement/${id}`);
+
+  //Id test page erreur b9123947
   };
 
   // Conversion titre en tableau pour gérer la longueur interface utilisateur

@@ -21,6 +21,7 @@ const Logements  = () => {
     const logement = data.find((item) => item.id === id);
     
     if (!logement) {
+       // console.log("Redirection vers la page erreur")
         return <Erreur />;
     }
     
