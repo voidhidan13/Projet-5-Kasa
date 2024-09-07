@@ -12,7 +12,7 @@ const Logements  = () => {
     const { id } = useParams();
 
     useEffect(() => {
-       //console.log("ID from URL:", id);
+       
         const logement = data.find((item) => item.id === id);
         //console.log("Matching Logement:", logement);
     }, [id]);
