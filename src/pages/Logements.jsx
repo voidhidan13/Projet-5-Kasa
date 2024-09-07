@@ -4,80 +4,50 @@ import data from '../data/donnees.json';
 import Transition from '../composants/Transition';
 import Depliant from '../composants/depliant';
 import Erreur from './Erreur';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import NotesEtoile from '../composants/NotesEtoile';  
+import InfosHote from '../composants/InfosHote'; 
 import '../styles/logements.scss';
 
 const Logements  = () => {
     const { id } = useParams();
 
     useEffect(() => {
-       
         const logement = data.find((item) => item.id === id);
-        //console.log("Matching Logement:", logement);
     }, [id]);
 
     // Redirection page erreur si pas de data
     const logement = data.find((item) => item.id === id);
     
     if (!logement) {
-       // console.log("Redirection vers la page erreur")
         return <Erreur />;
     }
-    
 
-
-
-    const renderStars = (rating) => {
-        const stars = [];
-        for (let i = 1; i <= 5; i++) {
-            stars.push(
-                <FontAwesomeIcon
-                    key={i}
-                    icon={faStar}
-                    style={{ color: i <= rating ? '#FF6060' : '#E0E0E0' }}
-                />
-            );
-        }
-        return stars;
-    };
-
-    const renderHostName = (name) => {
-        const [firstName, lastName] = name.split(' ');
-        return (
-            <div className="host-name">
-                <div>{firstName}</div>
-                <div>{lastName}</div>
-            </div>
-        );
-    };
-
-        return (
-            <div className="page-logement">
-                <Transition images={logement.pictures} />
-                <div className="logement-details">
-                    <div className="grid-container">
-                        <div className="left-column">
-                            <div className="title-container">
-                                <h1>{logement.title}</h1>
-                                <h2>{logement.location}</h2>
-                            </div>
-                            <div className="tags">
-                                {logement.tags.map((tag, index) => (
-                                    <p key={index}>{tag}</p>
-                                ))}
-                            </div>
+    return (
+        <div className="page-logement">
+            <Transition images={logement.pictures} />
+            <div className="logement-details">
+                <div className="grid-container">
+                    <div className="left-column">
+                        <div className="title-container">
+                            <h1>{logement.title}</h1>
+                            <h2>{logement.location}</h2>
                         </div>
-                        <div className="right-column">
-                        <div className="host-info">
-                            {renderHostName(logement.host.name)}
-                            <img src={logement.host.picture} alt={logement.host.name} className="host-picture" />
-                        </div>
-                            <div className="rating-container">
-                                {renderStars(logement.rating)}
-                            </div>
+                        <div className="tags">
+                            {logement.tags.map((tag, index) => (
+                                <p key={index}>{tag}</p>
+                            ))}
                         </div>
                     </div>
+                    <div className="right-column">
+                        {/* Utilisation du composant HostInfo pour afficher l'hôte */}
+                        <InfosHote name={logement.host.name} picture={logement.host.picture} />
+                        
+                        {/* Utilisation du composant StarRating pour afficher les étoiles */}
+                        <div className="rating-container">
+                            <NotesEtoile rating={logement.rating} />
+                        </div>
+                    </div>
+                </div>
                 <div className="collapse-container">
                     <Depliant className="collapse-component" title="Description" content={logement.description} />
                     <Depliant className="collapse-component" title="Equipements" content={logement.equipments.map((item, index) => <li key={index}>{item}</li>)} />
@@ -86,6 +56,5 @@ const Logements  = () => {
         </div>
     );
 };
-
 
 export default Logements;
