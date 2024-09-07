@@ -26,8 +26,11 @@ function App() {
             <Route path="/logement/:id" element={<Logements />} />
           </Routes>
         </main>
+        <div className="footer-container">
         <Footer /> {/* composant footer */}
+        </div>
       </div>
+
     </Router>
   );
 }
